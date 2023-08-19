@@ -1,4 +1,4 @@
-// function to add the cardList to html
+ // function to add the cardList to html
 const addCards = (items) => {
    items.forEach(item => {
       let itemToAppend = '<div class="col s4 center-align">'+
@@ -37,9 +37,9 @@ const addCards = (items) => {
    }
    
    function getAllCats(){
-      $.get('/api/cats',(response)=>{
-         if(response.statusCode === 200){
-            addCards(response.data);
+      $.get('/api/cats',(result)=>{
+         if (result.statusCode === 200) {
+             addCards(result.data);
          }
       });
    }
